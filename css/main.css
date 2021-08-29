@@ -740,7 +740,7 @@ blogs
 .blogs-center {
   display: grid;
   gap: 2rem;
-  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
 }
 
 .single-blog-front img {
@@ -848,7 +848,7 @@ remaining
 }
 .projects-page-center {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
 }
 .projects-page-center article {
   border-radius: var(--radius);
