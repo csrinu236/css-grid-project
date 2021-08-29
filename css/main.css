@@ -203,7 +203,7 @@ p {
   transform: scale(1.2);
 }
 .section-title {
-  margin-bottom: 2rem;
+  margin-bottom: 3rem;
 }
 /*
 ===========================================================================
@@ -370,7 +370,7 @@ services
 .services-center {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-  gap: 3rem 2rem;
+  gap: 2rem;
 }
 .services {
   background: var(--clr-grey-10);
@@ -423,12 +423,12 @@ projects
   width: 85vw;
   max-width: 500px;
   margin: 0 auto;
+  margin-bottom: 4rem;
 }
 .project-img-container {
   background: var(--clr-primary-5);
   position: relative;
   border-radius: var(--radius);
-  width: 100%;
 }
 .project-img-container:hover .project-img {
   opacity: 0.1;
@@ -481,7 +481,9 @@ projects
   text-transform: capitalize;
   letter-spacing: 3px;
 }
-
+.projects .section-title {
+  margin-bottom: 1.5rem;
+}
 .projects-center {
   margin-top: 2rem;
   display: grid;
@@ -518,4 +520,173 @@ projects
   .project-4 {
     grid-area: d;
   }
+}
+/*
+===========================================================================
+contact
+===========================================================================
+*/
+.contact {
+  position: relative;
+  /* min-height: 70vh; */
+  display: grid;
+  place-items: center;
+  padding: 12rem 0 7rem;
+  clip-path: polygon(50% 0, 100% 10%, 100% 90%, 50% 100%, 0 90%, 0 10%);
+}
+.video-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -2;
+  object-fit: cover;
+}
+.overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: var(--clr-white);
+  opacity: 0.5;
+  z-index: -1;
+}
+.contact-info {
+  background: var(--clr-primary-10);
+  width: 85vw;
+  max-width: 600px;
+  text-align: center;
+  padding: 4rem 3rem 7rem;
+  clip-path: polygon(
+    0% 0%,
+    100% 0%,
+    100% 85%,
+    70% 86%,
+    70% 100%,
+    50% 85%,
+    0 85%
+  );
+}
+
+/*
+===========================================================================
+skills
+===========================================================================
+*/
+.skills {
+  background: var(--clr-primary-9);
+}
+.skill-bar {
+  height: 1.25rem;
+  position: relative;
+  background: var(--clr-white);
+  border-radius: var(--radius);
+  margin-bottom: 1.25rem;
+}
+.skill-value {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: var(--clr-primary-5);
+  height: 100%;
+  border-radius: var(--radius);
+}
+.skill-name {
+  margin-bottom: 0.5rem;
+  color: var(--clr-primary-1);
+}
+.value {
+  position: absolute;
+  top: -1.8rem;
+  color: var(--clr-primary-1);
+  transform: translateX(-50%);
+}
+.skills-center {
+  display: grid;
+  gap: 4rem 2rem;
+}
+@media screen and (min-width: 800px) {
+  .skills-center {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+.left-50 {
+  left: 50%;
+}
+.left-60 {
+  left: 60%;
+}
+.left-70 {
+  left: 70%;
+}
+.left-80 {
+  left: 80%;
+}
+.value-50 {
+  width: 50%;
+}
+.value-60 {
+  width: 60%;
+}
+.value-70 {
+  width: 70%;
+}
+.value-80 {
+  width: 80%;
+}
+
+/*
+===========================================================================
+skills
+===========================================================================
+*/
+
+.timeline-center article {
+  max-width: 700px;
+  width: 85vw;
+  margin: 0 auto;
+  border-bottom: 2px dashed Var(--clr-primary-5);
+  padding: 3rem 3rem;
+  position: relative;
+}
+.timeline-center article:nth-child(odd) {
+  border-right: 2px dashed Var(--clr-primary-5);
+  border-bottom-right-radius: 30px;
+}
+.timeline-center article:nth-child(even) {
+  border-bottom-left-radius: 30px;
+  border-left: 2px dashed Var(--clr-primary-5);
+}
+.timeline-center article:nth-child(odd) .number {
+  transform: translate(50%, -50%);
+  right: 0;
+}
+.timeline-center article:nth-child(even) .number {
+  transform: translate(-50%, -50%);
+  left: 0;
+}
+.number {
+  position: absolute;
+  margin-bottom: 0;
+  font-size: 1.1rem;
+  width: 2rem;
+  height: 2rem;
+  background: var(--clr-primary-5);
+  color: var(--clr-primary-1);
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  font-weight: bold;
+  top: 50%;
+}
+
+/*
+===========================================================================
+blogs
+===========================================================================
+*/
+.blog {
+  background: var(--clr-grey-10);
 }
