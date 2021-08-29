@@ -687,6 +687,97 @@ skills
 blogs
 ===========================================================================
 */
-.blog {
+.blogs {
   background: var(--clr-grey-10);
+}
+.blogs .section-title {
+  margin-bottom: 4rem;
+}
+.blogs-center {
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+}
+
+.single-blog-front img {
+  object-fit: cover;
+  border-top-left-radius: var(--radius);
+  border-top-right-radius: var(--radius);
+  height: 40%;
+}
+.single-blog {
+  height: 35rem;
+  position: relative;
+}
+.single-blog:hover .single-blog-front {
+  transform: rotateY(180deg);
+}
+.single-blog:hover .single-blog-back {
+  transform: translateY(0);
+}
+.single-blog-front {
+  border-radius: var(--radius);
+  background: var(--clr-white);
+  position: absolute;
+  height: 100%;
+  transition: var(--transition);
+  width: 100%;
+  top: 0;
+  left: 0;
+  backface-visibility: hidden;
+  box-shadow: var(--light-shadow);
+}
+.blog-footer img {
+  height: 2.5rem;
+  width: 2.5rem;
+  border-radius: 50%;
+}
+.blog-info {
+  padding: 1.5rem 2rem;
+}
+.blog-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.blog-footer p {
+  text-transform: uppercase;
+  color: var(--clr-primary-5);
+  letter-spacing: 2px;
+}
+.single-blog-back {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  background: var(--clr-primary-8);
+  border-radius: var(--radius);
+  display: grid;
+  place-items: center;
+  transition: var(--transition);
+  transform: rotateY(180deg);
+  backface-visibility: hidden;
+}
+
+/*
+===========================================================================
+footer
+===========================================================================
+*/
+.main-footer {
+  background: #222;
+  display: grid;
+  place-items: center;
+}
+
+.footer-icons a {
+  color: var(--clr-primary-5);
+}
+.footer-icons a:hover {
+  color: var(--clr-primary-7);
+}
+.main-footer h4 {
+  color: var(--clr-primary-5);
 }
