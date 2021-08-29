@@ -428,7 +428,6 @@ projects
   background: var(--clr-primary-5);
   position: relative;
   border-radius: var(--radius);
-  height: 100%;
   width: 100%;
 }
 .project-img-container:hover .project-img {
@@ -456,7 +455,7 @@ projects
   opacity: 1;
 }
 .project-img {
-  height: 16rem;
+  height: 15rem;
   object-fit: cover;
   transition: var(--transition);
   object-fit: cover;
@@ -486,7 +485,7 @@ projects
 .projects-center {
   margin-top: 2rem;
   display: grid;
-  gap: 3rem 2rem;
+  gap: 2rem;
 }
 
 @media screen and (min-width: 800px) {
@@ -496,6 +495,7 @@ projects
 }
 @media screen and (min-width: 1100px) {
   .projects-center {
+    grid-template-columns: 1fr 1fr 1fr;
     grid-template-areas:
       "a b c"
       "a d d";
